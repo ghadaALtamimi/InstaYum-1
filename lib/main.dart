@@ -4,8 +4,8 @@ import 'package:instayum1/screen/auth_screen.dart';
 import 'package:instayum1/screen/profile_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:instayum1/mainpages.dart';
+import 'package:instayum1/splash.dart';
 
-//hii
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                 builder: (ctx, userSnapshot) {
                   if (userSnapshot.hasData) {
                     // it mean he is authintecated
-                    return MainPages();
+                    return SplashScreen();
                   }
                   return AuthScreen(); //otherwise he does not have an accoun and return him to authScreen
                 }),

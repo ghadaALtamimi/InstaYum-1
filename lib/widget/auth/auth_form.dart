@@ -65,13 +65,14 @@ class _AuthFormState extends State<AuthForm> {
       FocusScope.of(context).unfocus();
 
       if (_userImageFile == null && _isSignUp) {
+        //Image.asset("assets/images/defalut.png");
         Scaffold.of(context).showSnackBar(
           SnackBar(
-            content: Text("Please pick an image"),
+            content: Text("Default image is picked you can change it later"),
             backgroundColor: Theme.of(context).errorColor,
           ),
         );
-        return;
+        // return;
       }
       if (isValid) {
         _formKey.currentState?.save();
@@ -200,7 +201,7 @@ class _AuthFormState extends State<AuthForm> {
                           textColor: Color(
                               0xFFeb6d44), //Theme.of(context).primaryColor,
                           child: Text(_isSignUp
-                              ? "Already I have an account"
+                              ? "I already have an account"
                               : "Create a new account"),
                           onPressed: () {
                             setState(() {
