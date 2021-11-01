@@ -5,6 +5,7 @@ import 'package:instayum1/screen/profile_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:instayum1/mainpages.dart';
 
+//hii
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
